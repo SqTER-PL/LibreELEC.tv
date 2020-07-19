@@ -1,0 +1,2 @@
+#!/bin/sh
+ PROJECT=RPi DEVICE=RPi4 ARCH=arm VERSION=RPi4 tools/download-tool
