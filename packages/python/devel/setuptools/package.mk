@@ -3,8 +3,8 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="setuptools"
-PKG_VERSION="51.0.0"
-PKG_SHA256="64aab833ffcdd05e386e3f18f5a430082b14a4b74522724907f6a9a43ba6ec5e"
+PKG_VERSION="39.2.0"
+PKG_SHA256="ca8119dd5c2764a7d290518817de0b880d23d790913fcd797c02ad2aa39b8c41"
 PKG_LICENSE="OSS"
 PKG_SITE="https://pypi.org/project/setuptools"
 PKG_URL="https://github.com/pypa/setuptools/archive/v$PKG_VERSION.tar.gz"
