@@ -2,8 +2,8 @@
 # Copyright (C) 2009-2016 Stephan Raue (stephan@openelec.tv)
 
 PKG_NAME="dbus-python"
-PKG_VERSION="1.2.8"
-PKG_SHA256="abf12bbb765e300bf8e2a1b2f32f85949eab06998dbda127952c31cb63957b6f"
+PKG_VERSION="1.2.16"
+PKG_SHA256="11238f1d86c995d8aed2e22f04a1e3779f0d70e587caffeab4857f3c662ed5a4"
 PKG_LICENSE="GPL"
 PKG_SITE="https://freedesktop.org/wiki/Software/dbus"
 PKG_URL="https://dbus.freedesktop.org/releases/dbus-python/$PKG_NAME-$PKG_VERSION.tar.gz"
@@ -18,6 +18,5 @@ pre_configure_target() {
 }
 
 post_makeinstall_target() {
-  find $INSTALL/usr/lib -name "*.py" -exec rm -rf "{}" ";"
-  find $INSTALL/usr/lib -name "*.pyc" -exec rm -rf "{}" ";"
+  python_remove_source
 }

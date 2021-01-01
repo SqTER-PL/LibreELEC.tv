@@ -3,8 +3,8 @@
 # Copyright (C) 2019-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="simplejson"
-PKG_VERSION="3.16.0"
-PKG_SHA256="b1f329139ba647a9548aa05fb95d046b4a677643070dc2afc05fa2e975d09ca5"
+PKG_VERSION="3.17.2"
+PKG_SHA256="75ecc79f26d99222a084fbdd1ce5aad3ac3a8bd535cd9059528452da38b68841"
 PKG_LICENSE="OSS"
 PKG_SITE="http://pypi.org/project/simplejson"
 PKG_URL="https://files.pythonhosted.org/packages/source/${PKG_NAME:0:1}/$PKG_NAME/$PKG_NAME-$PKG_VERSION.tar.gz"
@@ -25,6 +25,7 @@ makeinstall_target() {
 }
 
 post_makeinstall_target() {
-  find $INSTALL/usr/lib -name "*.py" -exec rm -rf "{}" ";"
+  python_remove_source
+
   rm -rf $INSTALL/usr/lib/python*/site-packages/*/tests
 }
