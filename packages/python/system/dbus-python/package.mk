@@ -18,5 +18,6 @@ pre_configure_target() {
 }
 
 post_makeinstall_target() {
-  python_remove_source
+  find $INSTALL/usr/lib -name "*.py" -exec rm -rf "{}" ";"
+  find $INSTALL/usr/lib -name "*.pyc" -exec rm -rf "{}" ";"
 }
