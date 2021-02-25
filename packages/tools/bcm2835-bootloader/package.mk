@@ -3,21 +3,12 @@
 # Copyright (C) 2017-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="bcm2835-bootloader"
-
-# use latest master firmware on RPi4 and latest pre-common
-# firmware on RPi0-3
-if [ "$DEVICE" = "RPi4" ]; then
-  PKG_VERSION="2b76cfc6f57d4943144b9ceb5b57d3d455d6a8fd"
-  PKG_SHA256="8e3197667d80bd4e6faccf1e77dbb546c884467298edc7ce46db241ca6c137fc"
-else
-  PKG_VERSION="9e3c23ce779e8cf44c33d6a25bba249319207f68"
-  PKG_SHA256="7ab85b6d7082be87556bc02353b97f97bb1d4af304e4004a3d7ad2a17bb8a696"
-fi
-
-PKG_ARCH="arm"
+PKG_VERSION="5985247fb75681985547641d66196c77499f26b9"
+PKG_SHA256="539e7768d9d7fd553dc3e294b8e0f53b9d843a81587ff99b52c2aceb67c37d6f"
+PKG_ARCH="arm aarch64"
 PKG_LICENSE="nonfree"
 PKG_SITE="http://www.broadcom.com"
-PKG_URL="$DISTRO_SRC/$PKG_NAME-$PKG_VERSION.tar.xz"
+PKG_URL="${DISTRO_SRC}/${PKG_NAME}-${PKG_VERSION}.tar.xz"
 PKG_DEPENDS_TARGET="toolchain linux bcmstat"
 PKG_LONGDESC="bcm2835-bootloader: Tool to create a bootable kernel for RaspberryPi"
 PKG_TOOLCHAIN="manual"
